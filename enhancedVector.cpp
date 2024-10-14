@@ -13,6 +13,19 @@ int seqSearch(const std::vector<elemType> &list, const elemType& item){
     }
     return -1;
 }
+
+template<class elemType>
+void reverseVector(vector<elemType> &list) {
+    // store a copy
+    vector<elemType> temp = list;
+    // clear original
+    list.clear();
+    int size=temp.size();
+    for (int i=0; i < size; i++){
+      elemType thisitem=temp[size-i-1];
+      list.push_back(thisitem);
+    }
+}
 class EnhancedVector {
   private:
     vector<double> mainvec;
@@ -66,6 +79,11 @@ class EnhancedVector {
             topsum+=diff*diff;
         }
         cout << "The standard deviation is "<< sqrt(topsum/count) << endl;
+    }
+
+    void reverse(){
+        reverseVector(mainvec);
+        cout << "Vector reversed" << endl;
     }
 };
 
