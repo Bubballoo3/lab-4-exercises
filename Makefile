@@ -17,7 +17,7 @@ all: $(TARGET)
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
-test.o: test.cpp ex3.cpp pt3.cpp pt4.cpp pt5.cpp pt6.cpp
+test.o: test.cpp enhancedVector.cpp
 	$(CXX) $(CXXFLAGS) -c test.cpp
 
 # Clean up object files and executable

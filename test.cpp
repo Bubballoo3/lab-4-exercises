@@ -1,5 +1,5 @@
 // A test program for all four excercises
-#include "ex3.cpp"
+#include "enhancedVector.cpp"
 
 #include <iostream>
 using namespace std;
