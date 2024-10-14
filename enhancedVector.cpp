@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
+#include <map>
 
 using namespace std;
 
@@ -66,15 +67,15 @@ class EnhancedVector {
         cout << "The number " << val << " was found at index " << place << endl;
     }
 
-    void stdDev(vector<double> invec){
+    void stdDev(){
         double sum=0;
-        for (double item:invec){
+        for (double item:mainvec){
             sum+=item;
         }
-        double count=invec.size();
+        double count=mainvec.size();
         double avg=sum/count;
         double topsum=0;
-        for (double item:invec){
+        for (double item:mainvec){
             double diff=item-avg;
             topsum+=diff*diff;
         }
@@ -84,6 +85,16 @@ class EnhancedVector {
     void reverse(){
         reverseVector(mainvec);
         cout << "Vector reversed" << endl;
+    }
+    void displayCounts(){
+        map<double, int> counts;
+        for (double item:mainvec){
+            counts[item]++;
+        }
+        for (const auto& pair : counts) {
+            cout << "The number " << pair.first << " occurs " << pair.second << " times."<< endl;
+        }
+
     }
 };
 
