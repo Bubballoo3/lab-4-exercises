@@ -7,12 +7,11 @@
 #include <string>
 using namespace std;
 int main(){
-    cout << "Made" << endl;
     // create a new vector object with our added functions from the exercises
     EnhancedVector ev;    
     string filename;
     // ask user for a csv file to load in with input file stream
-    cout << "Please enter a .csv file to read a vector from.\n" << endl;
+    cout << "Please enter a .csv file to read a vector from." << endl;
     cin >> filename;
     // create an input stream out of the file
     std::ifstream file(filename);
@@ -35,7 +34,7 @@ int main(){
     int choice;
     double value;
     while(true){
-        cout << "Please select a computation from the list below:\n1. Find the smallest, largest, and average value\n2. Reverse the elements of the vector in memory\n3. Search the vector for a value\n4. Find the standard deviation of the values in the vector\n5. Find the number of occurrences of each value in the vector\n6. Exit the program" << endl;
+        cout << "\nPlease select a computation from the list below:\n1. Find the smallest, largest, and average value\n2. Reverse the elements of the vector in memory\n3. Search the vector for a value\n4. Find the standard deviation of the values in the vector\n5. Find the number of occurrences of each value in the vector\n6. Exit the program" << endl;
         cin >> choice;
 
         switch(choice){
